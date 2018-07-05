@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;prototype&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-css-layout style-name="body-layout" size-full>
+   <vaadin-css-layout style-name="bg-gray" width-full>
+    <vaadin-vertical-layout style-name="grid-title-contain">
+     <vaadin-label plain-text>
+       Product list 
+     </vaadin-label>
+    </vaadin-vertical-layout>
+    <vaadin-horizontal-layout width-full margin>
+     <vaadin-form-layout :expand>
+      <vaadin-text-field caption="Product name" width-full _id="productNameTextField"></vaadin-text-field>
+      <vaadin-text-field caption="Product Qty" width-full _id="productQtyTextField"></vaadin-text-field>
+      <vaadin-text-area caption="Product description" width-full height="300px" _id="productDescriptionTextArea"></vaadin-text-area>
+      <vaadin-horizontal-layout>
+       <vaadin-button width="120px" height="40px" plain-text _id="cancelButton">
+         Cancel 
+       </vaadin-button>
+       <vaadin-button enabled="false" style-name="friendly" width="120px" height="40px" plain-text _id="saveButton">
+         Save 
+       </vaadin-button>
+      </vaadin-horizontal-layout>
+     </vaadin-form-layout>
+     <vaadin-vertical-layout :expand>
+      <vaadin-grid width-full data-item-type="com.example.vaadinprototype.model.ProductEntry" _id="productGrid">
+       <table>
+        <colgroup>
+         <col column-id="productName" sortable>
+         <col column-id="productQty" sortable>
+         <col column-id="productDescription" sortable>
+        </colgroup>
+        <thead>
+         <tr default>
+          <th plain-text column-ids="productName">Product Name</th>
+          <th plain-text column-ids="productQty">Product Qty</th>
+          <th plain-text column-ids="productDescription">Product Description</th>
+         </tr>
+        </thead>
+        <tbody></tbody>
+       </table>
+      </vaadin-grid>
+     </vaadin-vertical-layout>
+    </vaadin-horizontal-layout>
+   </vaadin-css-layout>
+  </vaadin-css-layout>
+ </body>
+</html>

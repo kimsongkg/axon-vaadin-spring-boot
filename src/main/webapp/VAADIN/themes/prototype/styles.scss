@@ -1,0 +1,55 @@
+@import "prototype";
+
+.prototype {
+  @include prototype;
+}
+
+/*
+Start own custom style css ...
+ */
+
+* {
+  font-family: Roboto;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.p-20 {
+  padding: 20px;
+}
+.pull-right {
+  float: right;
+}
+body {
+  background-color: #FFFFFF;
+}
+.body-layout {
+  padding: 0 10%;
+}
+.header-layout {
+  @include background-image(linear-gradient(270deg, #34086b 0%, #092d6b 100%));
+}
+.logo {
+  width: 80px !important;
+  cursor: pointer;
+}
+.bg-gray {
+  background-color: #efefef;
+}
+.menu-layout .v-menubar-menuitem, .menu-profile .v-menubar-menuitem {
+  padding: 15px 40px !important;
+}
+.menu-layout .v-menubar-menuitem .v-menubar-menuitem-caption, .menu-profile .v-menubar-menuitem .v-menubar-menuitem-caption {
+  border-radius: 0 !important;
+  color: #FFFFFF;
+}
+.menu-profile .v-menubar-menuitem {
+  float: right;
+}
+.grid-title-contain {
+  border-bottom: 1px solid #388f37;
+}
+.grid-title-contain .v-label-undef-w {
+  font-size: 24px;
+  font-weight: bold;
+}
